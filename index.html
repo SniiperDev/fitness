@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application d'exercice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RE9U2hK5AR1FzR2omE8QR49eqrX8VPCDld7UKLYO+kB3fsITPtmKvUztVjCNrgsV7mMLGu9eh8cpeGgn1ex4lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 id="exerciseTitle">Choisissez un exercice :</h1>
+    <ul id="exercises">
+        <li onclick="startTimer('Bras')">
+            <img src="images/Bras.png" alt="Bras" />
+        </li>
+        <li onclick="startTimer('Dos')">
+            <img src="images/Dos.png" alt="Dos" />
+        </li>
+        <li onclick="startTimer('Abdos')">
+            <img src="images/Abdos.png" alt="Abdos" />
+        </li>
+        <li onclick="startTimer('Pecs')">
+            <img src="images/Pecs.png" alt="Poitrine" />
+        </li>
+        <li onclick="startTimer('Jambes')">
+            <img src="images/Jambes.png" alt="Jambes" />
+        </li>
+    </ul>
+
+    <div id="timer" style="display: none;">
+        <h2>Chronomètre</h2>
+        <img id="exerciseImage" src="" alt="">
+        <p id="time">00:00:00</p>
+        <button id="pauseButton" class="button-secondary" onclick="togglePause()">Pause</button>
+        <button class="button-danger" onclick="stop()">Arrêter</button>
+    </div>
+    <div>
+        <h1>Dates des exercices</h1>
+    <center><div id="completedExercises">
+     <!-- Les exercices et les temps seront ajoutés ici -->
+      </div></center>
+    </div>
+      
+    
+    <script src="script.js"></script>
+</body>
+</html>
